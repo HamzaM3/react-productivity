@@ -1,0 +1,7 @@
+$colors : #CA4EFF, #3553FF, #2FF8FF, #7BFF4B, #FFE250, #FF5B0F, #FF4141;
+  
+@mixin glow-ball($color) {
+    $bright-color : scale-color($color, $lightness: 60%);
+    background: radial-gradient($color, $bright-color 100%);
+    box-shadow : 0 0 30px 5px $bright-color
+}

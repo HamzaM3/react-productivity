@@ -1,0 +1,16 @@
+html, body {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    min-height: 100vh;
+    background: #1A1C27;
+    user-select: none;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 100vh;
+}

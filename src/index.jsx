@@ -7,6 +7,7 @@ import './scss/sidebar.scss'
 import './scss/alarm.scss'
 import './scss/chrono.scss'
 import './scss/clock.scss'
+import './scss/death.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

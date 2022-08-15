@@ -1,0 +1,95 @@
+@use 'colors' as *;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+@font-face {
+    font-family: 'Digital Dismay'; 
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/digital-dismay.regular.otf') format("opentype");
+}
+
+.death {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Audiowide', monospace;
+    gap: 5rem;
+    color: scale-color(nth($colors, 6), $lightness: -10%);
+
+    h1 {
+        font-size: 6rem;
+        margin-bottom: 2rem;
+        filter: drop-shadow(0 0 10px nth($colors, 6))
+    }
+
+    .input {
+        font-size: 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        font-weight: 100;
+        .day, .month, .year {
+            font-family: 'Digital Dismay', monospace;
+            position: relative;
+            > div, svg {
+                filter: drop-shadow(0 0 5px nth($colors, 6));
+            }
+            > div::before {
+                display: block;
+                position: absolute;
+                opacity: .1;
+                color: gray;
+                filter: none;
+            }
+        }
+        .day, .month {
+            width: 2ch;
+            text-align: end;
+            > div::before {
+                content: '88'
+            }
+        }
+        .year > div::before {
+            content: '8888';
+        }
+        > div {
+            font-size: 6rem;
+            display: flex;
+            flex-direction: column;
+        }
+        svg{
+
+            height: 3rem;
+        }
+    }
+
+    .label {
+        filter: drop-shadow(0 0 5px nth($colors, 6));
+        font-size: 3rem;
+    }
+    
+    .ok {
+        font-size: 3rem;
+        filter: drop-shadow(0 0 5px nth($colors, 6));
+    }
+
+    .count {
+        filter: drop-shadow(0 0 5px nth($colors, 6));
+        font-size: 3rem;
+        span {
+            font-family: 'Digital Dismay';
+            font-size: 5rem;
+            color: scale-color(nth($colors, 6), $lightness: 50%);
+            margin-right: 1rem;
+        }
+    }
+    
+    .message {
+        filter: drop-shadow(0 0 5px nth($colors, 6));
+        font-size: 2rem;
+    }
+}

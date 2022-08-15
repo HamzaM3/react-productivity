@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@font-face {
+  font-family: "Digital Dismay";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/digital-dismay.regular.otf") format("opentype");
+}
+.alarm {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Audiowide", monospace;
+  color: #df95ff;
+}
+.alarm h1 {
+  font-size: 6rem;
+  margin-bottom: 7rem;
+  filter: drop-shadow(0 0 10px #CA4EFF);
+}
+.alarm.ringing {
+  height: 100vh;
+}
+.alarm.ringing h1 {
+  margin-bottom: 2rem;
+}
+.alarm.ringing svg {
+  color: #df95ff;
+  fill: #df95ff;
+  filter: drop-shadow(0 0 10px #CA4EFF);
+}
+.alarm .time {
+  display: flex;
+  gap: 2rem;
+  font-size: 9rem;
+  font-family: "Digital Dismay", monospace;
+  position: relative;
+}
+.alarm .time :nth-child(1)::before, .alarm .time :nth-child(3)::before {
+  content: "88";
+  display: block;
+  position: absolute;
+  opacity: 0.1;
+  color: gray;
+}
+.alarm .time div {
+  filter: drop-shadow(0 0 5px #CA4EFF) drop-shadow(0 0 10px rgba(255, 255, 255, 0.1333333333));
+}
+.alarm .buttons-row {
+  display: flex;
+  gap: 10rem;
+  font-size: 4rem;
+  height: 4rem;
+}
+.alarm .buttons-row > div {
+  display: flex;
+  gap: 2rem;
+  filter: drop-shadow(0 0 5px #CA4EFF) drop-shadow(0 0 10px rgba(255, 255, 255, 0.1333333333));
+}
+.alarm .toggle-button {
+  font-size: 2rem;
+  border: 0.3rem solid #df95ff;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  margin-top: 6rem;
+  filter: drop-shadow(0 0 5px #CA4EFF) drop-shadow(0 0 10px rgba(255, 255, 255, 0.1333333333));
+}
+
+#bell {
+  height: 400px;
+}/*# sourceMappingURL=alarm.css.map */

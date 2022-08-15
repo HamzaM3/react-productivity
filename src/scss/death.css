@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@font-face {
+  font-family: "Digital Dismay";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/digital-dismay.regular.otf") format("opentype");
+}
+.death {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Audiowide", monospace;
+  gap: 5rem;
+  color: #f34d00;
+}
+.death h1 {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 0 10px #FF5B0F);
+}
+.death .input {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 100;
+}
+.death .input .day, .death .input .month, .death .input .year {
+  font-family: "Digital Dismay", monospace;
+  position: relative;
+}
+.death .input .day > div, .death .input .day svg, .death .input .month > div, .death .input .month svg, .death .input .year > div, .death .input .year svg {
+  filter: drop-shadow(0 0 5px #FF5B0F);
+}
+.death .input .day > div::before, .death .input .month > div::before, .death .input .year > div::before {
+  display: block;
+  position: absolute;
+  opacity: 0.1;
+  color: gray;
+  filter: none;
+}
+.death .input .day, .death .input .month {
+  width: 2ch;
+  text-align: end;
+}
+.death .input .day > div::before, .death .input .month > div::before {
+  content: "88";
+}
+.death .input .year > div::before {
+  content: "8888";
+}
+.death .input > div {
+  font-size: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+.death .input svg {
+  height: 3rem;
+}
+.death .label {
+  filter: drop-shadow(0 0 5px #FF5B0F);
+  font-size: 3rem;
+}
+.death .ok {
+  font-size: 3rem;
+  filter: drop-shadow(0 0 5px #FF5B0F);
+}
+.death .count {
+  filter: drop-shadow(0 0 5px #FF5B0F);
+  font-size: 3rem;
+}
+.death .count span {
+  font-family: "Digital Dismay";
+  font-size: 5rem;
+  color: #ffad87;
+  margin-right: 1rem;
+}
+.death .message {
+  filter: drop-shadow(0 0 5px #FF5B0F);
+  font-size: 2rem;
+}/*# sourceMappingURL=death.css.map */

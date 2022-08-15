@@ -1,6 +1,7 @@
 import Alarm from './Alarm'
 import Chrono from './Chrono'
 import Clock from './Clock'
+import Death from './Death'
 
 const [ALARM, CHRONO, CLOCK, TIMER, WEATHER, TODO, DEATH] = [0, 1, 2, 3, 4, 5, 6]
 
@@ -12,6 +13,8 @@ export default function MainSection( { currentApp } ) {
             return <Chrono/>;
         case CLOCK:
             return <Clock/>
+        case DEATH:
+            return <Death/>
         default: 
             return null;
     }

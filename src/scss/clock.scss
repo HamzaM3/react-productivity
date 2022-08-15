@@ -1,0 +1,50 @@
+@use 'colors' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.clock {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Audiowide', monospace;
+    color: scale-color(nth($colors, 3), $lightness: 60%);
+
+    h1 {
+        font-size: 6rem;
+        margin-bottom: 7rem;
+        filter: drop-shadow(0 0 10px nth($colors, 3))
+    }
+
+    svg {
+        width: 450px;
+        height: 450px;
+        filter: drop-shadow(0 0 5px nth($colors, 3)) drop-shadow(0 0 10px #ffffff22);
+        #clock {
+            fill : none;
+            stroke: scale-color(nth($colors, 3), $lightness: 60%);
+            stroke-width: 10px;
+        }
+        line {
+            stroke: scale-color(nth($colors, 3), $lightness: 60%);
+            stroke-linecap: round;
+        }
+        #center-circle {
+            fill: scale-color(nth($colors, 3), $lightness: 60%);
+            stroke: scale-color(nth($colors, 3), $lightness: 60%);
+            r: 3px;
+        }
+        #hour {
+            stroke-width: 4px;
+        }
+        
+        #min {
+            stroke-width: 3px;
+        }
+        
+        #sec {
+            stroke-width: 1px;
+        }
+    }
+}

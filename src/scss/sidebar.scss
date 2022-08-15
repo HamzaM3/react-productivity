@@ -1,6 +1,7 @@
 @use 'colors' as *;
 
 .sidebar {
+    cursor: pointer;
     margin: 0 1rem;
     display: flex;
     justify-content: space-around;

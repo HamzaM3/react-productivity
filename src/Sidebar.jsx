@@ -1,6 +1,4 @@
 import {SVGAlarm, SVGChrono, SVGClock, SVGDeathCount, SVGTimer, SVGTodo, SVGWeather} from './svg';
-import './sidebar.scss';
-
 export default function Sidebar ( {shiftApp, currentApp} ) {
     return <div className='sidebar'>
         <div className={currentApp === 0 ? 'glow' : ''} onClick={shiftApp(0)}>

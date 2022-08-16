@@ -110,3 +110,65 @@ export function SVGRingOff () {
     </svg>
     
 }
+
+export function SVGArrow ( { onClick, color } ) {
+    return <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 1792 1792" onClick={onClick}>
+        <defs>
+            <rect id="rect" width="1792" height="1792" />
+            <path id="arrow" d="M1532.1,808.7c23.6,23.2,35.9,55.6,33.6,88.6c2.4,31.9-10,63-33.6,84.6l-546.3,548.3c-45.4,45.4-119,45.4-164.4,0
+            c-45.4-45.4-45.4-119,0-164.4l354.4-354.4H342.1c-63.8,0.4-115.8-51-116.1-114.8c0-0.2,0-0.4,0-0.7c0.4-64,52.1-115.8,116.1-116.1
+            h833.6L821.4,426.2c-45.4-45.4-45.4-119,0-164.4c45.4-45.4,119-45.4,164.4,0l0,0L1532.1,808.7z"/>
+
+            <mask id="mask">
+                <rect id="rect" width="1792" height="1792" fill="#ffee96" />
+                <path id="arrow" d="M1532.1,808.7c23.6,23.2,35.9,55.6,33.6,88.6c2.4,31.9-10,63-33.6,84.6l-546.3,548.3c-45.4,45.4-119,45.4-164.4,0
+                c-45.4-45.4-45.4-119,0-164.4l354.4-354.4H342.1c-63.8,0.4-115.8-51-116.1-114.8c0-0.2,0-0.4,0-0.7c0.4-64,52.1-115.8,116.1-116.1
+                h833.6L821.4,426.2c-45.4-45.4-45.4-119,0-164.4c45.4-45.4,119-45.4,164.4,0l0,0L1532.1,808.7z"/>
+            </mask>
+        </defs>
+        <use href="#rect" mask="url(#mask)" fill="#ffee96"></use>
+</svg>
+}
+
+export function SVGCircle( { proportion } ) {
+    return <svg id="border" version="1.1" height="100px" width="100px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px">
+        <defs>
+            <circle id="clock" cx="50" cy="50" r="50"/>
+            <clipPath id="outside">
+                <use href="#clock"></use>
+            </clipPath>
+        </defs>
+
+        <g> 
+            <use href="#clock" clipPath="url(#outside)"></use>
+        </g>
+
+    </svg>
+}
+
+export function SVGPlus ( { onClick , color} ) {
+    return <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 20 20" onClick={onClick} fill={color} >
+        <defs>
+            <rect id="rect" width="20" height="20" />
+            <path id="plus" fill="black" stroke="black" d="M16 10c0 .553-.048 1-.601 1H11v4.399c0 .552-.447.601-1 .601-.553 0-1-.049-1-.601V11H4.601C4.049 11 4 10.553 4 10c0-.553.049-1 .601-1H9V4.601C9 4.048 9.447 4 10 4c.553 0 1 .048 1 .601V9h4.399c.553 0 .601.447.601 1z"/>
+            <mask id="mask">
+                <rect id="rect" width="1792" height="1792" fill="#ff9d6f" />
+                <use href="#plus" fill="black"></use>
+            </mask>
+        </defs>
+        <use href="#rect" mask="url(#mask)" fill="#ff9d6f"></use>
+    </svg>
+}
+
+export function SVGCheckbox ( { checked, onClick } ) {
+    return <svg className="checkbox" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" onClick={onClick} >
+        <path fill="none" strokeWidth="2" d={`M2,2 L22,2 L22,22 L2,22 L2,2 Z M5,13 ${checked ? "L10,17 L19,6" : ""}`}></path>
+    </svg>
+}
+
+export function SVGCross ( { onClick } ) {
+    return <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" onClick={onClick}>
+        <path fillRule="evenodd" clipRule="evenodd" d="M4.22676 4.22676C4.5291 3.92441 5.01929 3.92441 5.32163 4.22676L12 10.9051L18.6784 4.22676C18.9807 3.92441 19.4709 3.92441 19.7732 4.22676C20.0756 4.5291 20.0756 5.01929 19.7732 5.32163L13.0949 12L19.7732 18.6784C20.0756 18.9807 20.0756 19.4709 19.7732 19.7732C19.4709 20.0756 18.9807 20.0756 18.6784 19.7732L12 13.0949L5.32163 19.7732C5.01929 20.0756 4.5291 20.0756 4.22676 19.7732C3.92441 19.4709 3.92441 18.9807 4.22676 18.6784L10.9051 12L4.22676 5.32163C3.92441 5.01929 3.92441 4.5291 4.22676 4.22676Z"/>
+    </svg>
+    
+}

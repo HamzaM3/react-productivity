@@ -1,0 +1,96 @@
+@use 'colors' as *;
+
+@font-face {
+    font-family: 'Digital Dismay'; 
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/digital-dismay.regular.otf') format("opentype");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.timer {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Audiowide', monospace;
+    color: scale-color(nth($colors, 4), $lightness: 70%);
+
+    h1 {
+        font-size: 6rem;
+        margin-bottom: 7rem;
+        filter: drop-shadow(0 0 10px nth($colors, 4))
+    }
+
+    #border {
+        width: 450px;
+        height: 450px;
+        filter: drop-shadow(0 0 5px nth($colors, 4)) drop-shadow(0 0 10px #ffffff22);
+        #clock {
+            fill : none;
+            stroke: scale-color(nth($colors, 4), $lightness: 70%);
+            stroke-width: 10px;
+        }
+    }
+
+    .circle {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        > div , > svg{
+            grid-row: 1;
+            grid-column: 1;
+        }
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        gap: 2rem;
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+        .time {
+            display: flex;
+            font-size: 3rem;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            .hour, .min, .sec {
+                font-size: 4rem;
+                font-family: 'Digital Dismay';
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                filter: drop-shadow(0 0 2px nth($colors, 4)) drop-shadow(0 0 5px #ffffff22);
+                > div::before {
+                    content: '88';
+                    display: block;
+                    position: absolute;
+                    opacity: .1;
+                    color: gray;
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            > div {
+                filter: drop-shadow(0 0 2px nth($colors, 4)) drop-shadow(0 0 5px #ffffff22);
+                font-size: 1.5rem;
+                border: .3rem solid scale-color(nth($colors, 4), $lightness: 70%);
+                border-radius: 2rem;
+                padding: .5rem 1rem;
+            }
+            
+        }
+    }
+}

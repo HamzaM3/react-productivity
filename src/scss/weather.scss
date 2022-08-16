@@ -1,0 +1,59 @@
+@use "colors" as *;
+
+.weather {height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Audiowide', monospace;
+    color: scale-color(nth($colors, 5), $lightness: 40%);
+
+    h1 {
+        font-size: 6rem;
+        margin-bottom: 5rem;
+        filter: drop-shadow(0 0 10px nth($colors, 5))
+    }
+
+    .input {
+        display: flex;
+        .city {
+            border-radius: 2.5rem 0 0 2.5rem;
+            border-top: .5rem solid scale-color(nth($colors, 5), $lightness: 40%);
+            border-bottom: .5rem solid scale-color(nth($colors, 5), $lightness: 40%);
+            border-left: .5rem solid scale-color(nth($colors, 5), $lightness: 40%);
+            padding-left: 1rem;
+            padding-right: .6rem;
+
+
+            filter: drop-shadow(0 0 10px nth($colors, 5));
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input {
+                background: none;
+                font-family: 'Audiowide', monospace;
+                color: scale-color(nth($colors, 5), $lightness: 40%);
+                font-size: 2rem;
+                text-decoration: none !important;
+                width: 20ch;
+                caret-shape:underscore;
+            }
+        }
+
+        svg {
+            --lighter: #{scale-color(nth($colors, 5), $lightness: 40%)};
+            filter: drop-shadow(0 0 10px nth($colors, 5));
+            border-radius:0 2.5rem 2.5rem 0;
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+
+    .temp{
+        font-size: 6rem;
+        filter: drop-shadow(0 0 10px nth($colors, 5));
+        margin-top: 9rem;
+    }
+}
